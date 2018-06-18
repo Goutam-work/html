@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<head>
+    <title>User Registration</title>
+    <style>
+        .header{
+            background-color: aqua;
+            width: 100%;
+            padding-top: 20px;
+            padding-bottom:5px;
+            font-family: cursive;
+        }
+        .header img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+        .banner{
+            display:block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 70%;
+            height: 280px;
+        }
+        .formt{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            width: 50%;
+            height:35em;
+            text-align: center;
+            float: left;
+            border: 3px solid black;
+        }
+        .formt td,tr{
+            width:50%;
+            padding:10;
+        }
+        .formt tr:nth-child(even){background-color: #f2f2f2;}
+        input,select,textarea {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        }
+        input[type=submit]{
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px 32px;
+            margin: 40px 25%;
+            cursor: pointer;
+            width: 50%;
+        }
+        .footer{
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+        }
+        @media (max-width: 600px){
+          .formt{
+              width:100%;
+              }
+
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="header">
+        
+            <img src="resourses/user.png" alt="Logo" height="50px" width="50px" >
+            <h1 align="center">E-MART</h1>
+        
+    </div>
+    <img src="resourses/shop.gif" alt="banner" class="banner" >
+    <hr>
+    <div class="reg">
+    <form action="" method="POST">
+            <fieldset>
+                <legend>Personal information:</legend>
+                <table  class="formt" >
+                    <tr>
+                        <td><b>First Name</b></td>
+                        <td><input type="text" name="fname" placeholder="Your first name.."></td>
+                    </tr>
+                    <tr>
+                            <td><b>Middle Name</b></td>
+                            <td><input type="text" name="mname" placeholder="Your middle name.."></td>
+                    </tr>
+                    <tr>
+                            <td><b>Last Name</b></td>
+                            <td><input type="text" name="lname" placeholder="Your last name.."></td>
+                    </tr>
+
+                    <tr>
+                        <td><b>Email</b></td>
+                        <td><input type="email" name="smail" placeholder="xyz@abc.com"></td>
+                    </tr>
+                    <tr>
+                            <td><b>Phone No.</b></td>
+                            <td><input type="text" name="phno" placeholder="12345....."></td>
+                    </tr>
+                    <tr>
+                            <td><b>Password</b></td>
+                            <td><input type="password" name="pass" placeholder="Password"></td>
+                    </tr>
+                    <tr>
+                            <td><b>Re-enter Password</b></td>
+                            <td><input type="password" name="repass" placeholder="re-enter password"></td>
+                    </tr>
+                    <tr>
+                            <td><b>Date Of Birth</b></td>
+                            <td><input type="date" name="dob"></td>
+                    </tr>
+                    <tr>
+                            <td><b>Gender</b></td>
+                            <td >
+                            <input type="radio" name="gender" value="male" checked> Male
+                            <input type="radio" name="gender" value="female"> Female
+                            <input type="radio" name="gender" value="other"> Other
+                            </td>
+                    </tr>
+                    </table>
+                    <table  class="formt" >
+                    <tr>
+                            <td><b>Current Address</b></td>
+                            <td>
+                                <input type="text" name="cadd" placeholder="address...">
+                                <input type="text" name="ccity" placeholder="city">
+                                <select  name="cstate">
+                                    <option value="odisha">Odisha</option>
+                                    <option value="bihar">Bihar</option>
+                                    <option value="uttarakhand">Uttarakhand</option>
+                                </select>
+                                    <select  name="country">
+                                        <option value="India">India</option>
+                                        <option value="Pak">Pakistan</option>
+                                        <option value="usa">USA</option>
+                                    </select>
+                                
+                                <input type="text" name="czip" placeholder="Zip-Code"></td>
+                    </tr>
+                    <tr>
+                            <td><b>Permanent Address</b></td>
+                            <td>
+                                <input type="text" name="padd" placeholder="address...">
+                                <input type="text" name="pcity" placeholder="city">
+                                <select  name="pstate">
+                                    <option value="odisha">Odisha</option>
+                                    <option value="bihar">Bihar</option>
+                                    <option value="uttarakhand">Uttarakhand</option>
+                                </select>
+                                    <select  name="pcountry">
+                                        <option value="India">India</option>
+                                        <option value="Pak">Pakistan</option>
+                                        <option value="usa">USA</option>
+                                    </select>
+                                
+                                <input type="text" name="pzip" placeholder="Zip-code"></td>
+                    </tr>
+                    <tr>
+                            <td><b>Personal Interests</b></td>
+                            <td><textarea name="interests" placeholder="like sports, books, computer & software, fashion, photography etc... "></textarea></td>
+                    </tr>
+                </table>
+                <input type="submit" value="Submit">
+            </fieldset>
+    </form>
+    </div>
+    <div class="footer">
+            <div align="center">
+                    <img src="resourses/user.png" alt="Logo" height="50px" width="50px" ><b>E-MART</b><br>
+                    <em>@all rights reserved</em>
+            </div>
+    </div>
+    
+</body>
