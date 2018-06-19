@@ -3,15 +3,17 @@
     <title>User Registration</title>
     <style>
         .header{
-            display: flex;
-            flex-direction: column;
             background-color: aqua;
             width: 100%;
-            align-items: center;
             padding-top: 20px;
+            padding-bottom:5px;
             font-family: cursive;
         }
- 
+        .header img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
         .banner{
             display:block;
             margin-left: auto;
@@ -19,26 +21,20 @@
             width: 70%;
             height: 280px;
         }
-        .flexbox{
-            display: flex;
-            background-color: rgb(223, 243, 248);
-        }
-        .flexbox > div{
-            border: 3px solid black;
-            width: 50%;
-        }
         .formt{
             font-family: 'Times New Roman', Times, serif;
             font-size: 20px;
-            width: 100%;
-            height:auto;
+            width: 50%;
+            height:35em;
             text-align: center;
+            float: left;
+            border: 3px solid black;
         }
         .formt td,tr{
             width:50%;
             padding:10;
         }
-        .formt tr:nth-child(even){background-color: #9671fc;}
+        .formt tr:nth-child(even){background-color: #f2f2f2;}
         input,select,textarea {
         width: 100%;
         padding: 12px 20px;
@@ -50,10 +46,8 @@
         }
         input[type=submit]{
             background-color: #4CAF50;
-            border: none;
             color: white;
             padding: 16px 32px;
-            text-decoration: none;
             margin: 40px 25%;
             cursor: pointer;
             width: 50%;
@@ -64,12 +58,9 @@
             background: #ddd;
         }
         @media (max-width: 600px){
-          .flexbox{
-              flex-direction: column;
-          }
-          .flexbox > div{
+          .formt{
               width:100%;
-          }
+              }
 
         }
         
@@ -77,21 +68,17 @@
 </head>
 <body>
     <div class="header">
-        <div>
-            <img src="resourses/user.png" alt="Logo" height="50px" width="50px" >
-        </div>
-        <div>
-            <h1>E-MART</h1>
-        </div>
+        
+            <img src="../resourses/user.png" alt="Logo" height="50px" width="50px" >
+            <h1 align="center">E-MART</h1>
+        
     </div>
-    <img src="resourses/shop.gif" alt="banner" class="banner" >
+    <img src="../resourses/shop.gif" alt="banner" class="banner" >
     <hr>
-    
+    <div class="reg">
     <form action="" method="POST">
             <fieldset>
                 <legend>Personal information:</legend>
-                <div class="flexbox">
-                <div>
                 <table  class="formt" >
                     <tr>
                         <td><b>First Name</b></td>
@@ -128,41 +115,47 @@
                     </tr>
                     <tr>
                             <td><b>Gender</b></td>
-                            <td style="font-size: 15px;">
+                            <td >
                             <input type="radio" name="gender" value="male" checked> Male
                             <input type="radio" name="gender" value="female"> Female
                             <input type="radio" name="gender" value="other"> Other
                             </td>
                     </tr>
                     </table>
-                    </div>
-                    <div>
                     <table  class="formt" >
                     <tr>
                             <td><b>Current Address</b></td>
                             <td>
-                                <input type="text" name="cadd" placeholder="address..."><br>
-                                <input type="text" name="ccity" placeholder="city"><br>
-                                <input type="text" name="cstate"placeholder="state"><br>
+                                <input type="text" name="cadd" placeholder="address...">
+                                <input type="text" name="ccity" placeholder="city">
+                                <select  name="cstate">
+                                    <option value="odisha">Odisha</option>
+                                    <option value="bihar">Bihar</option>
+                                    <option value="uttarakhand">Uttarakhand</option>
+                                </select>
                                     <select  name="country">
                                         <option value="India">India</option>
                                         <option value="Pak">Pakistan</option>
                                         <option value="usa">USA</option>
-                                    </select><br>
+                                    </select>
                                 
                                 <input type="text" name="czip" placeholder="Zip-Code"></td>
                     </tr>
                     <tr>
                             <td><b>Permanent Address</b></td>
                             <td>
-                                <input type="text" name="padd" placeholder="address..."><br>
-                                <input type="text" name="pcity" placeholder="city"><br>
-                                <input type="text" name="pstate" placeholder="state"><br>
+                                <input type="text" name="padd" placeholder="address...">
+                                <input type="text" name="pcity" placeholder="city">
+                                <select  name="pstate">
+                                    <option value="odisha">Odisha</option>
+                                    <option value="bihar">Bihar</option>
+                                    <option value="uttarakhand">Uttarakhand</option>
+                                </select>
                                     <select  name="pcountry">
                                         <option value="India">India</option>
                                         <option value="Pak">Pakistan</option>
                                         <option value="usa">USA</option>
-                                    </select><br>
+                                    </select>
                                 
                                 <input type="text" name="pzip" placeholder="Zip-code"></td>
                     </tr>
@@ -171,17 +164,13 @@
                             <td><textarea name="interests" placeholder="like sports, books, computer & software, fashion, photography etc... "></textarea></td>
                     </tr>
                 </table>
-                
-                
-            </div>
-            </div>
-            <input type="submit" value="Submit">
+                <input type="submit" value="Submit">
             </fieldset>
     </form>
-   
+    </div>
     <div class="footer">
             <div align="center">
-                    <img src="resourses/user.png" alt="Logo" height="50px" width="50px" ><b>E-MART</b><br>
+                    <img src="../resourses/user.png" alt="Logo" height="50px" width="50px" ><b>E-MART</b><br>
                     <em>@all rights reserved</em>
             </div>
     </div>
